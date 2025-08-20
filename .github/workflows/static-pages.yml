@@ -26,15 +26,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # Dọn sạch thư mục deploy cũ
-      - name: Clean old _site
-        run: rm -rf _site && mkdir -p _site
+      # Dọn sạch toàn bộ file không theo git + thư mục _site
+      - name: Clean workspace & _site
+        run: |
+          git clean -fdx
+          rm -rf _site && mkdir -p _site
 
-      # Copy nội dung bên trong go_chat (không copy cả folder)
+      # Copy nội dung bên trong go_chat vào _site (không copy cả folder)
       - name: Copy content from go_chat directory (only inside, not folder)
         run: |
           if [ -d "go_chat" ]; then
-            rsync -av --progress go_chat/ _site/ --exclude='.git'
+            rsync -a --delete --exclude='.git' go_chat/ _site/
             echo "Copied all content from go_chat into _site/"
           else
             echo "Thư mục go_chat không tồn tại"
@@ -66,11 +68,24 @@ jobs:
             echo "Copied terms of use page"
           fi
 
+      # Ngăn GitHub Pages (Jekyll) bỏ qua file/dir bắt đầu bằng "_"
+      - name: Add .nojekyll
+        run: |
+          touch _site/.nojekyll
+
+      # Fail-fast nếu lỡ có thư mục/tệp go_chat trong _site
+      - name: Guardrail - Fail if go_chat exists in _site
+        run: |
+          if [ -e "_site/go_chat" ]; then
+            echo "::error::'_site' không được chứa 'go_chat'. Dừng build."
+            exit 1
+          fi
+
       # Debug: hiển thị cấu trúc cuối cùng
       - name: Debug - List final structure
         run: |
           echo "Final _site structure:"
-          find _site -type f | sort
+          find _site -maxdepth 3 -type f | sort
           echo ""
           ls -la _site/
 
@@ -86,6 +101,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
