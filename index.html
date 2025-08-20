@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <base href="/go_chat/">
+    <title>Gochat Home</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Apps company" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v4.15.3" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon-16x16.png"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="_astro/_landing_.DrknUcv3.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .content[data-astro-cid-6ly6ylk5] {
+        p {
+          margin: 1em 0;
+          line-height: var(--paragraphLineHeight);
+        }
+        a {
+          color: #00e;
+        }
+        a:visited {
+          color: #551a8b;
+        }
+      }
+      .content[data-astro-cid-qfdydib4] {
+        p {
+          margin: 1em 0;
+        }
+        a {
+          color: #00e;
+        }
+        a:visited {
+          color: #551a8b;
+        }
+      }
+      .square-bg[data-astro-cid-qfdydib4] {
+        width: 980px;
+        height: 1110px;
+        background: url(/pattern.png) #1a73e8;
+        border-radius: 50px;
+        transform: rotate(107deg);
+        position: absolute;
+        left: 58%;
+        top: -20%;
+        z-index: -1;
+        pointer-events: none;
+        @media (max-width: 1219px) {
+          width: 870px;
+          height: 1000px;
+          transform: rotate(103deg);
+          left: 64%;
+          top: -15%;
+        }
+        @media (max-width: 1100px) {
+          display: none;
+        }
+      }
+      .circle-bg[data-astro-cid-qfdydib4] {
+        width: 500px;
+        height: 500px;
+        background: #ffc845;
+        border-radius: 50%;
+        position: absolute;
+        left: -10%;
+        top: 20%;
+        z-index: -1;
+        pointer-events: none;
+        @media (max-width: 1219px) {
+          width: 400px;
+          height: 400px;
+          left: -20%;
+        }
+        @media (max-width: 991px) {
+          width: 345px;
+          height: 345px;
+          left: -15%;
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    </style>
+    <script type="module">
+      const e = document.getElementsByTagName("header")[0],
+        n = document.getElementById("hamburguer-menu");
+      function o() {
+        window.scrollY > 50
+          ? ((e.style.backgroundColor = "rgb(255, 255, 255)"),
+            n.classList.add("scrolled"))
+          : ((e.style.backgroundColor = "transparent"),
+            n.classList.remove("scrolled"));
+      }
+      window.addEventListener("load", o);
+      window.addEventListener("scroll", o);
+    </script>
+  </head>
+  <body>
+    <header
+      class="fixed top-0 z-50 flex min-h-[72px] w-full justify-center bg-transparent"
+    >
+      <nav
+        class="mx-auto flex w-full items-center px-[30px] md:max-w-[750px] lg:max-w-[970px] xl:max-w-[1170px] w-full items-center justify-between py-[10px]"
+      >
+        <a href="/go_chat"><img class="w-32" src="logo.png" /></a>
+        <div class="z-[1] has-[:checked]:absolute has-[:checked]:right-6">
+          <input
+            type="checkbox"
+            class="peer absolute z-[2] block h-4 w-4 cursor-pointer opacity-0"
+            autocomplete="off"
+            aria-label="Menu"
+            tabindex="0"
+            id="hamburguer-menu"
+          /><span
+            class="peer-[.scrolled]:bg-primary max-[1100px]:bg-primary bg-hamburguer peer-checked:bg-primary relative z-[1] mb-[2px] block h-[2px] w-4 origin-[0%_0%] rounded [transition:transform_0.5s_cubic-bezier(0.77,0.2,0.05,1),background_0.5s_cubic-bezier(0.77,0.2,0.05,1),opacity_0.55s_ease] peer-checked:opacity-[1] peer-checked:[transform:rotate(45deg)_translate(-2px,-2px)]"
+          ></span
+          ><span
+            class="peer-[.scrolled]:bg-primary max-[1100px]:bg-primary bg-hamburguer peer-checked:bg-primary relative z-[1] mb-[2px] block h-[2px] w-4 origin-[4px_0px] rounded [transition:transform_0.5s_cubic-bezier(0.77,0.2,0.05,1),background_0.5s_cubic-bezier(0.77,0.2,0.05,1),opacity_0.55s_ease] peer-checked:opacity-[0] peer-checked:[transform:rotate(0)_scale(0.2,0.2)]"
+          ></span
+          ><span
+            class="peer-[.scrolled]:bg-primary max-[1100px]:bg-primary bg-hamburguer peer-checked:bg-primary relative z-[1] mb-[2px] block h-[2px] w-4 origin-[0%_100%] rounded [transition:transform_0.5s_cubic-bezier(0.77,0.2,0.05,1),background_0.5s_cubic-bezier(0.77,0.2,0.05,1),opacity_0.55s_ease] peer-checked:[transform:rotate(-45deg)_translate(0,0)]"
+          ></span>
+          <div
+            class="absolute -right-6 -top-[30px] flex h-screen w-0 justify-end overflow-hidden bg-black bg-opacity-30 transition-all duration-200 ease-in-out peer-checked:w-screen"
+          >
+            <div
+              class="flex h-full w-80 flex-col items-center justify-between bg-white pt-14"
+            >
+              <div class="flex h-full w-full flex-col gap-6 px-6 py-4">
+                <li class="flex justify-between border-b py-4">
+                  <a
+                    class="underline inline-block hover:text-primary no-underline"
+                    href="terms-of-use"
+                    >Terms of Service</a
+                  >
+                  <div class="text-primary h-[20px] flex-shrink">
+                    <svg
+                      width="17"
+                      height="20"
+                      viewBox="0 0 17 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 14.4918C17 14.2833 16.9588 14.0886 16.8766 13.9076C16.7943 13.7265 16.6763 13.5592 16.5227 13.4056L3.48918 0.635388C3.19297 0.350142 2.83093 0.20752 2.40306 0.20752C2.12878 0.20752 1.87645 0.273346 1.64606 0.404998C1.41567 0.53665 1.23465 0.714928 1.103 0.939833C0.971344 1.16474 0.905518 1.41982 0.905518 1.70506C0.905518 2.11099 1.04814 2.46755 1.33339 2.77474L13.3137 14.4918L1.33339 26.2088C1.04814 26.516 0.905518 26.8725 0.905518 27.2785C0.905518 27.5638 0.971344 27.8189 1.103 28.0438C1.23465 28.2687 1.41567 28.4469 1.64606 28.5785C1.87645 28.7101 2.12878 28.776 2.40306 28.776C2.83093 28.776 3.19297 28.6279 3.48918 28.3318L16.5227 15.5779C16.6763 15.4243 16.7943 15.257 16.8766 15.076C16.9588 14.8949 17 14.7002 17 14.4918Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </li>
+                <li class="flex justify-between border-b py-4">
+                  <a
+                    class="underline inline-block hover:text-primary no-underline"
+                    href="privacy-and-cookies-policy"
+                    >Privacy and Cookie Policy</a
+                  >
+                  <div class="text-primary h-[20px] flex-shrink">
+                    <svg
+                      width="17"
+                      height="20"
+                      viewBox="0 0 17 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 14.4918C17 14.2833 16.9588 14.0886 16.8766 13.9076C16.7943 13.7265 16.6763 13.5592 16.5227 13.4056L3.48918 0.635388C3.19297 0.350142 2.83093 0.20752 2.40306 0.20752C2.12878 0.20752 1.87645 0.273346 1.64606 0.404998C1.41567 0.53665 1.23465 0.714928 1.103 0.939833C0.971344 1.16474 0.905518 1.41982 0.905518 1.70506C0.905518 2.11099 1.04814 2.46755 1.33339 2.77474L13.3137 14.4918L1.33339 26.2088C1.04814 26.516 0.905518 26.8725 0.905518 27.2785C0.905518 27.5638 0.971344 27.8189 1.103 28.0438C1.23465 28.2687 1.41567 28.4469 1.64606 28.5785C1.87645 28.7101 2.12878 28.776 2.40306 28.776C2.83093 28.776 3.19297 28.6279 3.48918 28.3318L16.5227 15.5779C16.6763 15.4243 16.7943 15.257 16.8766 15.076C16.9588 14.8949 17 14.7002 17 14.4918Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="relative w-full max-lg:pb-24 max-lg:pt-36 max-md:pb-16 max-md:pt-32 lg:pb-[160px] lg:pt-52 xxl:min-h-screen bg-cover bg-[center_center] bg-no-repeat sm:bg-hero-image xxl:min-h-screen"
+      data-astro-cid-6ly6ylk5
+      style="--paragraphLineHeight: normal"
+    >
+      <style>
+        astro-island,
+        astro-slot,
+        astro-static-slot {
+          display: contents;
+        }
+      </style>
+      <script>
+        (() => {
+          var e = async (t) => {
+            await (
+              await t()
+            )();
+          };
+          (self.Astro || (self.Astro = {})).only = e;
+          window.dispatchEvent(new Event("astro:only"));
+        })();
+        (() => {
+          var A = Object.defineProperty;
+          var g = (i, o, a) =>
+            o in i
+              ? A(i, o, {
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+                  value: a,
+                })
+              : (i[o] = a);
+          var d = (i, o, a) => g(i, typeof o != "symbol" ? o + "" : o, a);
+          {
+            let i = {
+                0: (t) => m(t),
+                1: (t) => a(t),
+                2: (t) => new RegExp(t),
+                3: (t) => new Date(t),
+                4: (t) => new Map(a(t)),
+                5: (t) => new Set(a(t)),
+                6: (t) => BigInt(t),
+                7: (t) => new URL(t),
+                8: (t) => new Uint8Array(t),
+                9: (t) => new Uint16Array(t),
+                10: (t) => new Uint32Array(t),
+              },
+              o = (t) => {
+                let [l, e] = t;
+                return l in i ? i[l](e) : void 0;
+              },
+              a = (t) => t.map(o),
+              m = (t) =>
+                typeof t != "object" || t === null
+                  ? t
+                  : Object.fromEntries(
+                      Object.entries(t).map(([l, e]) => [l, o(e)])
+                    );
+            class y extends HTMLElement {
+              constructor() {
+                super(...arguments);
+                d(this, "Component");
+                d(this, "hydrator");
+                d(this, "hydrate", async () => {
+                  var b;
+                  if (!this.hydrator || !this.isConnected) return;
+                  let e =
+                    (b = this.parentElement) == null
+                      ? void 0
+                      : b.closest("astro-island[ssr]");
+                  if (e) {
+                    e.addEventListener("astro:hydrate", this.hydrate, {
+                      once: !0,
+                    });
+                    return;
+                  }
+                  let c = this.querySelectorAll("astro-slot"),
+                    n = {},
+                    h = this.querySelectorAll("template[data-astro-template]");
+                  for (let r of h) {
+                    let s = r.closest(this.tagName);
+                    s != null &&
+                      s.isSameNode(this) &&
+                      ((n[r.getAttribute("data-astro-template") || "default"] =
+                        r.innerHTML),
+                      r.remove());
+                  }
+                  for (let r of c) {
+                    let s = r.closest(this.tagName);
+                    s != null &&
+                      s.isSameNode(this) &&
+                      (n[r.getAttribute("name") || "default"] = r.innerHTML);
+                  }
+                  let p;
+                  try {
+                    p = this.hasAttribute("props")
+                      ? m(JSON.parse(this.getAttribute("props")))
+                      : {};
+                  } catch (r) {
+                    let s = this.getAttribute("component-url") || "<unknown>",
+                      v = this.getAttribute("component-export");
+                    throw (
+                      (v && (s += ` (export ${v})`),
+                      console.error(
+                        `[hydrate] Error parsing props for component ${s}`,
+                        this.getAttribute("props"),
+                        r
+                      ),
+                      r)
+                    );
+                  }
+                  let u;
+                  await this.hydrator(this)(this.Component, p, n, {
+                    client: this.getAttribute("client"),
+                  }),
+                    this.removeAttribute("ssr"),
+                    this.dispatchEvent(new CustomEvent("astro:hydrate"));
+                });
+                d(this, "unmount", () => {
+                  this.isConnected ||
+                    this.dispatchEvent(new CustomEvent("astro:unmount"));
+                });
+              }
+              disconnectedCallback() {
+                document.removeEventListener("astro:after-swap", this.unmount),
+                  document.addEventListener("astro:after-swap", this.unmount, {
+                    once: !0,
+                  });
+              }
+              connectedCallback() {
+                if (
+                  !this.hasAttribute("await-children") ||
+                  document.readyState === "interactive" ||
+                  document.readyState === "complete"
+                )
+                  this.childrenConnectedCallback();
+                else {
+                  let e = () => {
+                      document.removeEventListener("DOMContentLoaded", e),
+                        c.disconnect(),
+                        this.childrenConnectedCallback();
+                    },
+                    c = new MutationObserver(() => {
+                      var n;
+                      ((n = this.lastChild) == null ? void 0 : n.nodeType) ===
+                        Node.COMMENT_NODE &&
+                        this.lastChild.nodeValue === "astro:end" &&
+                        (this.lastChild.remove(), e());
+                    });
+                  c.observe(this, { childList: !0 }),
+                    document.addEventListener("DOMContentLoaded", e);
+                }
+              }
+              async childrenConnectedCallback() {
+                let e = this.getAttribute("before-hydration-url");
+                e && (await import(e)), this.start();
+              }
+              async start() {
+                let e = JSON.parse(this.getAttribute("opts")),
+                  c = this.getAttribute("client");
+                if (Astro[c] === void 0) {
+                  window.addEventListener(`astro:${c}`, () => this.start(), {
+                    once: !0,
+                  });
+                  return;
+                }
+                try {
+                  await Astro[c](
+                    async () => {
+                      let n = this.getAttribute("renderer-url"),
+                        [h, { default: p }] = await Promise.all([
+                          import(this.getAttribute("component-url")),
+                          n ? import(n) : () => () => {},
+                        ]),
+                        u = this.getAttribute("component-export") || "default";
+                      if (!u.includes(".")) this.Component = h[u];
+                      else {
+                        this.Component = h;
+                        for (let f of u.split("."))
+                          this.Component = this.Component[f];
+                      }
+                      return (this.hydrator = p), this.hydrate;
+                    },
+                    e,
+                    this
+                  );
+                } catch (n) {
+                  console.error(
+                    `[astro-island] Error hydrating ${this.getAttribute(
+                      "component-url"
+                    )}`,
+                    n
+                  );
+                }
+              }
+              attributeChangedCallback() {
+                this.hydrate();
+              }
+            }
+            d(y, "observedAttributes", ["props"]),
+              customElements.get("astro-island") ||
+                customElements.define("astro-island", y);
+          }
+        })();
+      </script>
+      <div
+        class="mx-auto flex w-full items-center px-[30px] md:max-w-[750px] lg:max-w-[970px] xl:max-w-[1170px]"
+      >
+        <div
+          class="absolute left-0 top-0 -z-50 h-full w-1/2 overflow-hidden max-lg:hidden"
+          data-astro-cid-6ly6ylk5
+          style="--paragraphLineHeight: normal"
+        >
+          <astro-island
+            uid="SggpJ"
+            component-url="_astro/Particle.B4uU6dot.js"
+            component-export="Particles"
+            renderer-url="_astro/client.BmwHh9ou.js"
+            props='{"images":[1,[[0,{"src":[0,"particle-1.png"],"width":[0,25],"height":[0,25]}],[0,{"src":[0,"particle-2.png"],"width":[0,18],"height":[0,18]}],[0,{"src":[0,"particle-3.png"],"width":[0,32],"height":[0,32]}],[0,{"src":[0,"particle-4.png"],"width":[0,41],"height":[0,41]}],[0,{"src":[0,"particle-5.png"],"width":[0,22],"height":[0,22]}],[0,{"src":[0,"particle-2.png"],"width":[0,22],"height":[0,22]}],[0,{"src":[0,"particle-4.png"],"width":[0,22],"height":[0,22]}]]],"data-astro-cid-6ly6ylk5":[0,true]}'
+            ssr=""
+            client="only"
+            opts='{"name":"Particles","value":"react"}'
+          ></astro-island>
+        </div>
+        <div
+          class="w-full sm:w-[70%] md:w-[60%] lg:w-[50%]"
+          data-astro-cid-6ly6ylk5
+          style="--paragraphLineHeight: normal"
+        >
+          <h2
+            class="mb-5 text-[26px] font-light !leading-tight tracking-[-0.01em] sm:text-[30px] md:text-3xl lg:text-5xl"
+            data-astro-cid-6ly6ylk5
+            style="--paragraphLineHeight: normal"
+          >
+            Gochat App for iOS
+          </h2>
+          <div
+            class="content"
+            data-astro-cid-6ly6ylk5
+            style="--paragraphLineHeight: normal"
+          >
+            <h1>We Make Creating Stunning Images Easy With Gochat</h1>
+            <h2>Company Description</h2>
+            <p>
+              Turning your artistic ideas into reality has never been so easy,
+              thanks to Gochat. Our app uses advanced AI to help users create
+              unique images in seconds.
+            </p>
+            <p>
+              Gochat makes creating stunning images and artwork accessible for
+              everyone, from beginners to professionals.
+            </p>
+            <h2>Effortless Creativity</h2>
+            <p>
+              Do you need to create an image for a presentation, or would you
+              like to make some art just for fun?
+            </p>
+            <p>
+              Our goal is to help you generate innovative visualizations,
+              whatever your objective is.
+            </p>
+            <p>
+              Whether enhancing a photo or experimenting with new styles, Gochat
+              provides powerful tools that are easy to use.
+            </p>
+            <h2>Transformative Features</h2>
+            <p>
+              We aim to make the most of AI technology to aid in image
+              generation and transformation. By doing so, Gochat facilitates
+              bringing even the most complex artistic visions to life with
+              minimal effort.
+            </p>
+            <p>
+              Some of Gochat’s AI tools that you can use to boost your creativity
+              include:
+            </p>
+            <p>
+              - Text-to-image generation: Take advantage of AI to transform text
+              descriptions into vivid images.
+            </p>
+            <p>
+              - Style transfer: Apply various artistic styles to your images
+              with high precision.
+            </p>
+            <p>
+              - Customization: Fine-tune images with comprehensive editing
+              tools, ensuring each creation is unique.
+            </p>
+            <h2>Commitment to Innovation</h2>
+            <p>
+              Our team is dedicated to continuous development, blending
+              technology with creativity to exceed user expectations. Join us in
+              redefining image creation with Gochat.
+            </p>
+          </div>
+          <ul data-astro-cid-6ly6ylk5 style="--paragraphLineHeight: normal">
+            <li data-astro-cid-6ly6ylk5 style="--paragraphLineHeight: normal">
+              <a
+                class="underline inline-block hover:text-primary no-underline leading-relaxed text-primary hover:text-primaryHover"
+                href="terms-of-use"
+                data-astro-cid-6ly6ylk5="true"
+                >Terms of Service</a
+              >
+            </li>
+            <li data-astro-cid-6ly6ylk5 style="--paragraphLineHeight: normal">
+              <a
+                class="underline inline-block hover:text-primary no-underline leading-relaxed text-primary hover:text-primaryHover"
+                href="privacy-and-cookies-policy"
+                data-astro-cid-6ly6ylk5="true"
+                >Privacy and Cookie Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <go_chat
+      class="mt-10 flex w-full flex-col border-t border-[rgb(239,239,239)] bg-footer-image bg-[center_50px] bg-no-repeat py-20"
+      data-astro-cid-6ly6ylk5
+      style="--paragraphLineHeight: normal"
+    >
+      <div
+        class="mx-auto flex w-full items-center px-[30px] md:max-w-[750px] lg:max-w-[970px] xl:max-w-[1170px] flex-wrap !items-start"
+      >
+        <div
+          class="mb-7 w-full px-4 sm:mb-0 sm:mt-4 sm:w-[30%] sm:pl-0 md:w-[35%] md:pr-0 lg:w-[23%]"
+          data-astro-cid-6ly6ylk5
+          style="--paragraphLineHeight: normal"
+        >
+          <img
+            class="w-32"
+            src="logo.png"
+            data-astro-cid-6ly6ylk5
+            style="--paragraphLineHeight: normal"
+          />
+        </div>
+        <div
+          class="mb-7 w-full px-4 sm:w-[50%] lg:w-[25%]"
+          data-astro-cid-6ly6ylk5
+          style="--paragraphLineHeight: normal"
+        >
+          <h3
+            class="mb-4 font-bold"
+            data-astro-cid-6ly6ylk5
+            style="--paragraphLineHeight: normal"
+          >
+            Our information
+          </h3>
+          <ul data-astro-cid-6ly6ylk5 style="--paragraphLineHeight: normal">
+            <li
+              class="text-sm leading-9 text-gray-700 opacity-80 hover:opacity-100"
+              data-astro-cid-6ly6ylk5
+              style="--paragraphLineHeight: normal"
+            >
+              <a
+                class="underline inline-block hover:text-primary no-underline"
+                href="terms-of-use"
+                data-astro-cid-6ly6ylk5="true"
+                >Terms of Service</a
+              >
+            </li>
+            <li
+              class="text-sm leading-9 text-gray-700 opacity-80 hover:opacity-100"
+              data-astro-cid-6ly6ylk5
+              style="--paragraphLineHeight: normal"
+            >
+              <a
+                class="underline inline-block hover:text-primary no-underline"
+                href="privacy-and-cookies-policy"
+                data-astro-cid-6ly6ylk5="true"
+                >Privacy and Cookie Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="mb-3 mt-5 w-full text-center text-sm text-gray-800"
+          data-astro-cid-6ly6ylk5
+          style="--paragraphLineHeight: normal"
+        >
+          © Copyright 2025 - GOFA SOFTWARE CO.,LTD LLC. - All rights reserved
+        </div>
+      </div>
+    <footer>
+  </body>
+</html>
